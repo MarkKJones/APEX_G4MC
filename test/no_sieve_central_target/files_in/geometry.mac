@@ -1,0 +1,298 @@
+#hallPhys[0]  hallLogical Vacuum Ndaughter=4
+ /vis/geometry/set/visibility hallLogical 0 false 
+ /vis/geometry/set/forceSolid hallLogical 0  true 
+ #/vis/geometry/set/forceWireframe hallLogical 0  false 
+ #/vis/geometry/set/daughtersInvisible hallLogical 0  false 
+#--xAxisPhys[0]  xAxisLogical Vacuum Ndaughter=0 G4Color(1,0,0,1) (red)
+   /vis/geometry/set/visibility xAxisLogical 0 true 
+   /vis/geometry/set/forceSolid xAxisLogical 0  true 
+   #/vis/geometry/set/forceWireframe xAxisLogical 0  false 
+   #/vis/geometry/set/colour xAxisLogical 0 1 0 0 1
+#--yAxisPhys[0]  yAxisLogical Vacuum Ndaughter=0 G4Color(0,1,0,1) (green)
+   /vis/geometry/set/visibility yAxisLogical 0 true 
+   /vis/geometry/set/forceSolid yAxisLogical 0  true 
+   #/vis/geometry/set/forceWireframe yAxisLogical 0  false 
+   #/vis/geometry/set/colour yAxisLogical 0 0 1 0 1
+#--zAxisPhys[0]  zAxisLogical Vacuum Ndaughter=0 G4Color(0,0,1,1) (blue)
+   /vis/geometry/set/visibility zAxisLogical 0 true 
+   /vis/geometry/set/forceSolid zAxisLogical 0  true 
+   #/vis/geometry/set/forceWireframe zAxisLogical 0  false 
+   #/vis/geometry/set/colour zAxisLogical 0 0 0 1 1
+#--magneticPhys[0]  magneticLogical Vacuum Ndaughter=31
+   /vis/geometry/set/visibility magneticLogical 0 false 
+   /vis/geometry/set/forceSolid magneticLogical 0  true 
+   #/vis/geometry/set/forceWireframe magneticLogical 0  false 
+   #/vis/geometry/set/daughtersInvisible magneticLogical 0  false 
+#----LHRSContainerPhys[0]  LHRSContainerLogical Vacuum Ndaughter=27
+     /vis/geometry/set/visibility LHRSContainerLogical 0 false 
+     /vis/geometry/set/forceSolid LHRSContainerLogical 0  true 
+     #/vis/geometry/set/forceWireframe LHRSContainerLogical 0  false 
+     #/vis/geometry/set/daughtersInvisible LHRSContainerLogical 0  false 
+#------LQ1FrontPhys[0]  LQ1FrontLogical Vacuum Ndaughter=0
+       /vis/geometry/set/visibility LQ1FrontLogical 0 false 
+       /vis/geometry/set/forceSolid LQ1FrontLogical 0  true 
+       #/vis/geometry/set/forceWireframe LQ1FrontLogical 0  false 
+#------dip_en_new[0]  dip_en_logical_new SiliconSteel Ndaughter=0 G4Color(0.8,0.8,1,1)
+       /vis/geometry/set/visibility dip_en_logical_new 0 true 
+       /vis/geometry/set/forceSolid dip_en_logical_new 0  true 
+       #/vis/geometry/set/forceWireframe dip_en_logical_new 0  false 
+       #/vis/geometry/set/colour dip_en_logical_new 0 0.8 0.8 1 1
+#------q3_ex_logic left[0]  q3_ex_logic SiliconSteel Ndaughter=0 G4Color(0.8,0.8,1,1)
+       /vis/geometry/set/visibility q3_ex_logic 0 true 
+       /vis/geometry/set/forceSolid q3_ex_logic 0  true 
+       #/vis/geometry/set/forceWireframe q3_ex_logic 0  false 
+       #/vis/geometry/set/colour q3_ex_logic 0 0.8 0.8 1 1
+#------LQ1Phys[0]  LQ1Logical SiliconSteel Ndaughter=0 G4Color(0.392157,0.584314,0.929412,1)
+       /vis/geometry/set/visibility LQ1Logical 0 true 
+       /vis/geometry/set/forceSolid LQ1Logical 0  true 
+       #/vis/geometry/set/forceWireframe LQ1Logical 0  false 
+       #/vis/geometry/set/colour LQ1Logical 0 0.392157 0.584314 0.929412 1
+#------LQ1vacPhys[0]  LQ1vacLogical SiliconSteel Ndaughter=0 G4Color(0,1,0,1) (green)
+       /vis/geometry/set/visibility LQ1vacLogical 0 true 
+       /vis/geometry/set/forceSolid LQ1vacLogical 0  true 
+       #/vis/geometry/set/forceWireframe LQ1vacLogical 0  false 
+       #/vis/geometry/set/colour LQ1vacLogical 0 0 1 0 1
+#------LQ2Phys[0]  LQ2Logical SiliconSteel Ndaughter=0 G4Color(0.392157,0.584314,0.929412,1)
+       /vis/geometry/set/visibility LQ2Logical 0 true 
+       /vis/geometry/set/forceSolid LQ2Logical 0  true 
+       #/vis/geometry/set/forceWireframe LQ2Logical 0  false 
+       #/vis/geometry/set/colour LQ2Logical 0 0.392157 0.584314 0.929412 1
+#------vacPhys[0]  vacRa_Logical SiliconSteel Ndaughter=0 G4Color(0,1,0,1) (green)
+       /vis/geometry/set/visibility vacRa_Logical 0 true 
+       /vis/geometry/set/forceSolid vacRa_Logical 0  true 
+       #/vis/geometry/set/forceWireframe vacRa_Logical 0  false 
+       #/vis/geometry/set/colour vacRa_Logical 0 0 1 0 1
+#------vacPhys[0]  vacRb_Logical SiliconSteel Ndaughter=0 G4Color(0,1,0,1) (green)
+       /vis/geometry/set/visibility vacRb_Logical 0 true 
+       /vis/geometry/set/forceSolid vacRb_Logical 0  true 
+       #/vis/geometry/set/forceWireframe vacRb_Logical 0  false 
+       #/vis/geometry/set/colour vacRb_Logical 0 0 1 0 1
+#------vacPhys[0]  vacRc1_Logical SiliconSteel Ndaughter=0 G4Color(0,1,0,1) (green)
+       /vis/geometry/set/visibility vacRc1_Logical 0 true 
+       /vis/geometry/set/forceSolid vacRc1_Logical 0  true 
+       #/vis/geometry/set/forceWireframe vacRc1_Logical 0  false 
+       #/vis/geometry/set/colour vacRc1_Logical 0 0 1 0 1
+#------vacPhys[0]  vacRc2_Logical SiliconSteel Ndaughter=0 G4Color(0,1,0,1) (green)
+       /vis/geometry/set/visibility vacRc2_Logical 0 true 
+       /vis/geometry/set/forceSolid vacRc2_Logical 0  true 
+       #/vis/geometry/set/forceWireframe vacRc2_Logical 0  false 
+       #/vis/geometry/set/colour vacRc2_Logical 0 0 1 0 1
+#------vacPhys[0]  vacRd_Logical SiliconSteel Ndaughter=0 G4Color(0,1,0,1) (green)
+       /vis/geometry/set/visibility vacRd_Logical 0 true 
+       /vis/geometry/set/forceSolid vacRd_Logical 0  true 
+       #/vis/geometry/set/forceWireframe vacRd_Logical 0  false 
+       #/vis/geometry/set/colour vacRd_Logical 0 0 1 0 1
+#------LQ2vacPhys[0]  LQ2vacLogical SiliconSteel Ndaughter=0 G4Color(0,1,0,1) (green)
+       /vis/geometry/set/visibility LQ2vacLogical 0 true 
+       /vis/geometry/set/forceSolid LQ2vacLogical 0  true 
+       #/vis/geometry/set/forceWireframe LQ2vacLogical 0  false 
+       #/vis/geometry/set/colour LQ2vacLogical 0 0 1 0 1
+#------LQ2vac2Phys[0]  LQ2vac2Logical SiliconSteel Ndaughter=0 G4Color(0,1,0,1) (green)
+       /vis/geometry/set/visibility LQ2vac2Logical 0 true 
+       /vis/geometry/set/forceSolid LQ2vac2Logical 0  true 
+       #/vis/geometry/set/forceWireframe LQ2vac2Logical 0  false 
+       #/vis/geometry/set/colour LQ2vac2Logical 0 0 1 0 1
+#------LDipolePhys[0]  LDipoleLogical SiliconSteel Ndaughter=0 G4Color(1,0.5,0,1)
+       /vis/geometry/set/visibility LDipoleLogical 0 true 
+       /vis/geometry/set/forceSolid LDipoleLogical 0  true 
+       #/vis/geometry/set/forceWireframe LDipoleLogical 0  false 
+       #/vis/geometry/set/colour LDipoleLogical 0 1 0.5 0 1
+#------LQ3Phys[0]  LQ3Logical SiliconSteel Ndaughter=0 G4Color(0.392157,0.584314,0.929412,1)
+       /vis/geometry/set/visibility LQ3Logical 0 true 
+       /vis/geometry/set/forceSolid LQ3Logical 0  true 
+       #/vis/geometry/set/forceWireframe LQ3Logical 0  false 
+       #/vis/geometry/set/colour LQ3Logical 0 0.392157 0.584314 0.929412 1
+#------LQ3vacPhys[0]  LQ3vacLogical SiliconSteel Ndaughter=0 G4Color(0,1,0,1) (green)
+       /vis/geometry/set/visibility LQ3vacLogical 0 true 
+       /vis/geometry/set/forceSolid LQ3vacLogical 0  true 
+       #/vis/geometry/set/forceWireframe LQ3vacLogical 0  false 
+       #/vis/geometry/set/colour LQ3vacLogical 0 0 1 0 1
+#------LQ3vac2Phys[0]  LQ3vac2Logical SiliconSteel Ndaughter=0 G4Color(1,0,0,1) (red)
+       /vis/geometry/set/visibility LQ3vac2Logical 0 true 
+       /vis/geometry/set/forceSolid LQ3vac2Logical 0  true 
+       #/vis/geometry/set/forceWireframe LQ3vac2Logical 0  false 
+       #/vis/geometry/set/colour LQ3vac2Logical 0 1 0 0 1
+#------LQ1MagPhys[0]  LQ1MagLogical Vacuum Ndaughter=2 G4Color(0.8,0.8,0.2,1)
+       /vis/geometry/set/visibility LQ1MagLogical 0 true 
+       /vis/geometry/set/forceSolid LQ1MagLogical 0  true 
+       #/vis/geometry/set/forceWireframe LQ1MagLogical 0  false 
+       #/vis/geometry/set/daughtersInvisible LQ1MagLogical 0  false 
+       #/vis/geometry/set/colour LQ1MagLogical 0 0.8 0.8 0.2 1
+#--------virtualBoundaryPhys_q1en_LHRS[0]  LPlaneLogical1 Vacuum Ndaughter=0
+         /vis/geometry/set/visibility LPlaneLogical1 0 false 
+         /vis/geometry/set/forceSolid LPlaneLogical1 0  true 
+         #/vis/geometry/set/forceWireframe LPlaneLogical1 0  false 
+#------LQ2MagPhys[0]  LQ2MagLogical Vacuum Ndaughter=2 G4Color(0.8,0.8,0.2,1)
+       /vis/geometry/set/visibility LQ2MagLogical 0 true 
+       /vis/geometry/set/forceSolid LQ2MagLogical 0  true 
+       #/vis/geometry/set/forceWireframe LQ2MagLogical 0  false 
+       #/vis/geometry/set/daughtersInvisible LQ2MagLogical 0  false 
+       #/vis/geometry/set/colour LQ2MagLogical 0 0.8 0.8 0.2 1
+#------LDipoleTunnelPhys[0]  LDipoleTunnelLogical Vacuum Ndaughter=2
+       /vis/geometry/set/visibility LDipoleTunnelLogical 0 false 
+       /vis/geometry/set/forceSolid LDipoleTunnelLogical 0  true 
+       #/vis/geometry/set/forceWireframe LDipoleTunnelLogical 0  false 
+       #/vis/geometry/set/daughtersInvisible LDipoleTunnelLogical 0  false 
+#------LQ3MagPhys[0]  LQ3MagLogical Vacuum Ndaughter=2 G4Color(1,0,1,1) (magenta)
+       /vis/geometry/set/visibility LQ3MagLogical 0 true 
+       /vis/geometry/set/forceSolid LQ3MagLogical 0  true 
+       #/vis/geometry/set/forceWireframe LQ3MagLogical 0  false 
+       #/vis/geometry/set/daughtersInvisible LQ3MagLogical 0  false 
+       #/vis/geometry/set/colour LQ3MagLogical 0 1 0 1 1
+#------virtualBoundaryPhys_vdc_LHRS[0]  LFPLogical Vacuum Ndaughter=0
+       /vis/geometry/set/visibility LFPLogical 0 false 
+       /vis/geometry/set/forceSolid LFPLogical 0  true 
+       #/vis/geometry/set/forceWireframe LFPLogical 0  false 
+#------vdc1_LHRS[0]  vdc1Logical Vacuum Ndaughter=0 G4Color(0.392157,0.584314,0.929412,1)
+       /vis/geometry/set/visibility vdc1Logical 0 true 
+       /vis/geometry/set/forceSolid vdc1Logical 0  true 
+       #/vis/geometry/set/forceWireframe vdc1Logical 0  false 
+       #/vis/geometry/set/colour vdc1Logical 0 0.392157 0.584314 0.929412 1
+#------FocPl_LHRS[0]  FocPlLLogical Vacuum Ndaughter=0
+       /vis/geometry/set/visibility FocPlLLogical 0 false 
+       /vis/geometry/set/forceSolid FocPlLLogical 0  true 
+       #/vis/geometry/set/forceWireframe FocPlLLogical 0  false 
+#----RHRSContainerPhys[0]  RHRSContainerLogical Vacuum Ndaughter=26
+     /vis/geometry/set/visibility RHRSContainerLogical 0 false 
+     /vis/geometry/set/forceSolid RHRSContainerLogical 0  true 
+     #/vis/geometry/set/forceWireframe RHRSContainerLogical 0  false 
+     #/vis/geometry/set/daughtersInvisible RHRSContainerLogical 0  false 
+#------RQ1FrontPhys[0]  RQ1FrontLogical Vacuum Ndaughter=0
+       /vis/geometry/set/visibility RQ1FrontLogical 0 false 
+       /vis/geometry/set/forceSolid RQ1FrontLogical 0  true 
+       #/vis/geometry/set/forceWireframe RQ1FrontLogical 0  false 
+#------RQ1Phys[0]  RQ1Logical SiliconSteel Ndaughter=0 G4Color(0.392157,0.584314,0.929412,1)
+       /vis/geometry/set/visibility RQ1Logical 0 true 
+       /vis/geometry/set/forceSolid RQ1Logical 0  true 
+       #/vis/geometry/set/forceWireframe RQ1Logical 0  false 
+       #/vis/geometry/set/colour RQ1Logical 0 0.392157 0.584314 0.929412 1
+#------RQ1vacPhys[0]  RQ1vacLogical SiliconSteel Ndaughter=0 G4Color(0,1,0,1) (green)
+       /vis/geometry/set/visibility RQ1vacLogical 0 true 
+       /vis/geometry/set/forceSolid RQ1vacLogical 0  true 
+       #/vis/geometry/set/forceWireframe RQ1vacLogical 0  false 
+       #/vis/geometry/set/colour RQ1vacLogical 0 0 1 0 1
+#------RQ2Phys[0]  RQ2Logical SiliconSteel Ndaughter=0 G4Color(0.392157,0.584314,0.929412,1)
+       /vis/geometry/set/visibility RQ2Logical 0 true 
+       /vis/geometry/set/forceSolid RQ2Logical 0  true 
+       #/vis/geometry/set/forceWireframe RQ2Logical 0  false 
+       #/vis/geometry/set/colour RQ2Logical 0 0.392157 0.584314 0.929412 1
+#------RQ2vacPhys[0]  RQ2vacLogical SiliconSteel Ndaughter=0 G4Color(0,1,0,1) (green)
+       /vis/geometry/set/visibility RQ2vacLogical 0 true 
+       /vis/geometry/set/forceSolid RQ2vacLogical 0  true 
+       #/vis/geometry/set/forceWireframe RQ2vacLogical 0  false 
+       #/vis/geometry/set/colour RQ2vacLogical 0 0 1 0 1
+#------RQ2vac2Phys[0]  RQ2vac2Logical SiliconSteel Ndaughter=0 G4Color(0,1,0,1) (green)
+       /vis/geometry/set/visibility RQ2vac2Logical 0 true 
+       /vis/geometry/set/forceSolid RQ2vac2Logical 0  true 
+       #/vis/geometry/set/forceWireframe RQ2vac2Logical 0  false 
+       #/vis/geometry/set/colour RQ2vac2Logical 0 0 1 0 1
+#------RDipolePhys[0]  RDipoleLogical SiliconSteel Ndaughter=0 G4Color(1,0.5,0,1)
+       /vis/geometry/set/visibility RDipoleLogical 0 true 
+       /vis/geometry/set/forceSolid RDipoleLogical 0  true 
+       #/vis/geometry/set/forceWireframe RDipoleLogical 0  false 
+       #/vis/geometry/set/colour RDipoleLogical 0 1 0.5 0 1
+#------RQ3Phys[0]  RQ3Logical SiliconSteel Ndaughter=0 G4Color(0.392157,0.584314,0.929412,1)
+       /vis/geometry/set/visibility RQ3Logical 0 true 
+       /vis/geometry/set/forceSolid RQ3Logical 0  true 
+       #/vis/geometry/set/forceWireframe RQ3Logical 0  false 
+       #/vis/geometry/set/colour RQ3Logical 0 0.392157 0.584314 0.929412 1
+#------RQ3vacPhys[0]  RQ3vacLogical SiliconSteel Ndaughter=0 G4Color(0,1,0,1) (green)
+       /vis/geometry/set/visibility RQ3vacLogical 0 true 
+       /vis/geometry/set/forceSolid RQ3vacLogical 0  true 
+       #/vis/geometry/set/forceWireframe RQ3vacLogical 0  false 
+       #/vis/geometry/set/colour RQ3vacLogical 0 0 1 0 1
+#------RQ3vac2Phys[0]  RQ3vac2Logical SiliconSteel Ndaughter=0 G4Color(0,1,0,1) (green)
+       /vis/geometry/set/visibility RQ3vac2Logical 0 true 
+       /vis/geometry/set/forceSolid RQ3vac2Logical 0  true 
+       #/vis/geometry/set/forceWireframe RQ3vac2Logical 0  false 
+       #/vis/geometry/set/colour RQ3vac2Logical 0 0 1 0 1
+#------RQ1MagPhys[0]  RQ1MagLogical Vacuum Ndaughter=2 G4Color(0.8,0.8,0.2,1)
+       /vis/geometry/set/visibility RQ1MagLogical 0 true 
+       /vis/geometry/set/forceSolid RQ1MagLogical 0  true 
+       #/vis/geometry/set/forceWireframe RQ1MagLogical 0  false 
+       #/vis/geometry/set/daughtersInvisible RQ1MagLogical 0  false 
+       #/vis/geometry/set/colour RQ1MagLogical 0 0.8 0.8 0.2 1
+#--------virtualBoundaryPhys_q1en_RHRS[0]  RPlaneLogical1 Vacuum Ndaughter=0
+         /vis/geometry/set/visibility RPlaneLogical1 0 false 
+         /vis/geometry/set/forceSolid RPlaneLogical1 0  true 
+         #/vis/geometry/set/forceWireframe RPlaneLogical1 0  false 
+#------RQ2MagPhys[0]  RQ2MagLogical Vacuum Ndaughter=2 G4Color(0.8,0.8,0.2,1)
+       /vis/geometry/set/visibility RQ2MagLogical 0 true 
+       /vis/geometry/set/forceSolid RQ2MagLogical 0  true 
+       #/vis/geometry/set/forceWireframe RQ2MagLogical 0  false 
+       #/vis/geometry/set/daughtersInvisible RQ2MagLogical 0  false 
+       #/vis/geometry/set/colour RQ2MagLogical 0 0.8 0.8 0.2 1
+#------RDipoleTunnelPhys[0]  RDipoleTunnelLogical Vacuum Ndaughter=2
+       /vis/geometry/set/visibility RDipoleTunnelLogical 0 false 
+       /vis/geometry/set/forceSolid RDipoleTunnelLogical 0  true 
+       #/vis/geometry/set/forceWireframe RDipoleTunnelLogical 0  false 
+       #/vis/geometry/set/daughtersInvisible RDipoleTunnelLogical 0  false 
+#------RQ3MagPhys[0]  RQ3MagLogical Vacuum Ndaughter=2 G4Color(1,0,1,1) (magenta)
+       /vis/geometry/set/visibility RQ3MagLogical 0 true 
+       /vis/geometry/set/forceSolid RQ3MagLogical 0  true 
+       #/vis/geometry/set/forceWireframe RQ3MagLogical 0  false 
+       #/vis/geometry/set/daughtersInvisible RQ3MagLogical 0  false 
+       #/vis/geometry/set/colour RQ3MagLogical 0 1 0 1 1
+#------virtualBoundaryPhys_vdc_RHRS[0]  RFPLogical Vacuum Ndaughter=0
+       /vis/geometry/set/visibility RFPLogical 0 false 
+       /vis/geometry/set/forceSolid RFPLogical 0  true 
+       #/vis/geometry/set/forceWireframe RFPLogical 0  false 
+#----vac Box en1 min[0]  vac Box 1 Tungsten Ndaughter=0 G4Color(0.8,0.8,1,1)
+     /vis/geometry/set/visibility vac Box 1 0 true 
+     /vis/geometry/set/forceSolid vac Box 1 0  true 
+     #/vis/geometry/set/forceWireframe vac Box 1 0  false 
+     #/vis/geometry/set/colour vac Box 1 0 0.8 0.8 1 1
+#----trrap_en1_max[0]  trrap_en1_max Tungsten Ndaughter=0 G4Color(0.8,0.8,1,1)
+     /vis/geometry/set/visibility trrap_en1_max 0 true 
+     /vis/geometry/set/forceSolid trrap_en1_max 0  true 
+     #/vis/geometry/set/forceWireframe trrap_en1_max 0  false 
+     #/vis/geometry/set/colour trrap_en1_max 0 0.8 0.8 1 1
+#----trrap_en2_max[0]  trrap_en2_max Tungsten Ndaughter=0 G4Color(0.8,0.8,1,1)
+     /vis/geometry/set/visibility trrap_en2_max 0 true 
+     /vis/geometry/set/forceSolid trrap_en2_max 0  true 
+     #/vis/geometry/set/forceWireframe trrap_en2_max 0  false 
+     #/vis/geometry/set/colour trrap_en2_max 0 0.8 0.8 1 1
+#----trrap_en2_min[0]  trrap_en2_min Tungsten Ndaughter=0 G4Color(0.8,0.8,1,1)
+     /vis/geometry/set/visibility trrap_en2_min 0 true 
+     /vis/geometry/set/forceSolid trrap_en2_min 0  true 
+     #/vis/geometry/set/forceWireframe trrap_en2_min 0  false 
+     #/vis/geometry/set/colour trrap_en2_min 0 0.8 0.8 1 1
+#----cov1_up[0]  trrap_cov_1_up Tungsten Ndaughter=0 G4Color(0.8,0.8,1,1)
+     /vis/geometry/set/visibility trrap_cov_1_up 0 true 
+     /vis/geometry/set/forceSolid trrap_cov_1_up 0  true 
+     #/vis/geometry/set/forceWireframe trrap_cov_1_up 0  false 
+     #/vis/geometry/set/colour trrap_cov_1_up 0 0.8 0.8 1 1
+#----cov1_bot[0]  trrap_cov_1_bot Tungsten Ndaughter=0 G4Color(0.8,0.8,1,1)
+     /vis/geometry/set/visibility trrap_cov_1_bot 0 true 
+     /vis/geometry/set/forceSolid trrap_cov_1_bot 0  true 
+     #/vis/geometry/set/forceWireframe trrap_cov_1_bot 0  false 
+     #/vis/geometry/set/colour trrap_cov_1_bot 0 0.8 0.8 1 1
+#----cov2_up[0]  trrap_cov_2_up Tungsten Ndaughter=0 G4Color(0.8,0.8,1,1)
+     /vis/geometry/set/visibility trrap_cov_2_up 0 true 
+     /vis/geometry/set/forceSolid trrap_cov_2_up 0  true 
+     #/vis/geometry/set/forceWireframe trrap_cov_2_up 0  false 
+     #/vis/geometry/set/colour trrap_cov_2_up 0 0.8 0.8 1 1
+#----cov2_bot[0]  trrap_cov_2_bot Tungsten Ndaughter=0 G4Color(0.8,0.8,1,1)
+     /vis/geometry/set/visibility trrap_cov_2_bot 0 true 
+     /vis/geometry/set/forceSolid trrap_cov_2_bot 0  true 
+     #/vis/geometry/set/forceWireframe trrap_cov_2_bot 0  false 
+     #/vis/geometry/set/colour trrap_cov_2_bot 0 0.8 0.8 1 1
+#----RadTail[0]  RadTailLogical Tungsten Ndaughter=0 G4Color(0.998,0.008,0,1)
+     /vis/geometry/set/visibility RadTailLogical 0 true 
+     /vis/geometry/set/forceSolid RadTailLogical 0  true 
+     #/vis/geometry/set/forceWireframe RadTailLogical 0  false 
+     #/vis/geometry/set/colour RadTailLogical 0 0.998 0.008 0 1
+#----RadTailDet[0]  RadTailDetLogical Vacuum Ndaughter=0 G4Color(0.00998,0.99008,0,1)
+     /vis/geometry/set/visibility RadTailDetLogical 0 true 
+     /vis/geometry/set/forceSolid RadTailDetLogical 0  true 
+     #/vis/geometry/set/forceWireframe RadTailDetLogical 0  false 
+     #/vis/geometry/set/colour RadTailDetLogical 0 0.00998 0.99008 0 1
+#----RSievePhys[0]  sieveSlitLogical Tungsten Ndaughter=0 G4Color(0.392157,0.584314,0.929412,1)
+     /vis/geometry/set/visibility sieveSlitLogical 0 true 
+     /vis/geometry/set/forceSolid sieveSlitLogical 0  true 
+     #/vis/geometry/set/forceWireframe sieveSlitLogical 0  false 
+     #/vis/geometry/set/colour sieveSlitLogical 0 0.392157 0.584314 0.929412 1
+#----RSvSlBack[0]  sieveBackPlaneLogical Vacuum Ndaughter=0
+     /vis/geometry/set/visibility sieveBackPlaneLogical 0 false 
+     /vis/geometry/set/forceSolid sieveBackPlaneLogical 0  true 
+     #/vis/geometry/set/forceWireframe sieveBackPlaneLogical 0  false 
