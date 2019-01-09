@@ -21,7 +21,7 @@ Detector:
 
 There are two modes to construct the detector.
 1. HRS standard mode - where you have vacuum, Q1-quad, Q2 quad, Dipole, Q3-quad
-2. APEX mode - where you have displaced targets (by about dz=-100 cm), septum magnet with it's vacuum chambers and then the standard HRS spectrometers (Q1, Q2, Dipole, Q3).
+2. APEX mode - where we have displaced targets (by about dz=-100 cm), septum magnet with it's vacuum chambers and then the standard HRS spectrometers (Q1, Q2, Dipole, Q3).
 Switching the septum "ON" in Detector.ini, the septum mode is built automatically.
 With "SeptumOn=0" the standard HRS can be used.
 3. The Sieve slits is defined for APEX modes, but it needs one line modification to place it in the HRS standard mode place.
@@ -62,11 +62,11 @@ I haven't deleted them - may be useful.
 
 How to run:
 
-1. Set up geant:
-ON ifarm (@JLab) you just need to do 
+1. Set up geant: <br>
+A locally installed geant4 version should be ok. <br>
+On ifarm (@JLab) <br>
 > setenv JLAB_ROOT /site/12gev_phys <br>
 > source $JLAB_ROOT/softenv.csh 2.0 <br>
-Or, you can use your locally installed geant4 version.
 
 
 2. Download the package to your local directory 
