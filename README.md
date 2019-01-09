@@ -83,7 +83,7 @@ On ifarm (@JLab) <br>
 
 4.Run:
 After above steps an exacutable "G4MC" will appear in build/ directory
-> cp G4MC ../test/no_sieve_central_target/files_in/ <br>
+> ln -s `pwd`/G4MC ../test/no_sieve_central_target/files_in/G4MC <br>
 > cd ../test/no_sieve_central_target/run <br>
 > chmod 744 run_0003.sh <br>
 > ./run_0003.sh <br>
