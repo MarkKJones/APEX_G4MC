@@ -1,14 +1,13 @@
-Fields
+Magnetic Fields
 Only dipole central field is using the fortran code (dipolert2.f) which is a part of the SNAKE package.
-All the other fields (quads central and fringe fields, dipole fringe field) functions are translated to cpp-language and implemented in the G4-codes (a few years I found this way more effective, but didn't manage to translate the last part - dipole central field).
+For the other fields (quads central and fringe fields, dipole fringe field) SNAKE functions are translated to cpp-language and implemented in the G4-codes (a few years ago I found this way more effective, but didn't manage to translate the last part - dipole central field).
 In the current version the fields are given as global field (by HRSEMField.cc).
-In old versions the fields were localized in volumes (see HRSEMFieldSetup.cc). 
-This way was not very productive when I added fringe fields and tryed to run simulations with different step sizes, and also monitor the field values on each of the track steps.
+In old versions the fields were localized in volumes (see HRSEMFieldSetup.cc). This way was not very productive when I added fringe fields and tryed to run simulations with different step sizes, and also monitor the field values on each of the track steps.
 
 Generator
 The initial particle generation is done by "HRSPrimaryGeneratorAction.cc".
-It uses geant macro input files, while for APEX full simulation, I used input root files to generate e- e+ pairs... 
-Depends on what process (particles) you want to generate
+It uses geant macro input files, while for APEX full simulation, I used root files as input to generate e- e+ pairs... 
+We can modify the particles generation with different ways - depends on what process (particles) you want to generate
 
 Detector
 There are two modes to construct the detector.
