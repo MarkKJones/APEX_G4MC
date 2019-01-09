@@ -10,12 +10,12 @@
 /mydet/gunRHigh 0.0 mm
 #/mydet/gunZHigh 0.0 mm
 #/mydet/gunZLow 0.00000001 mm
-/mydet/particle1/momentumLow  2100 MeV
-/mydet/particle1/momentumHigh 2100 MeV
-/mydet/gunZLow  -105.30001365 cm
-/mydet/gunZHigh -105.30001365 cm
-/mydet/particle1/thetaLow 2.0 deg
-/mydet/particle1/thetaHigh 8.0 deg
+/mydet/particle1/momentumLow  1500 MeV
+/mydet/particle1/momentumHigh 1500 MeV
+/mydet/gunZLow  0.0 cm
+/mydet/gunZHigh 0.0 cm
+/mydet/particle1/thetaLow 10.0 deg
+/mydet/particle1/thetaHigh 15.0 deg
 
 /mydet/particle1/phiLow -3.0 deg
 /mydet/particle1/phiHigh 3.0 deg
@@ -26,4 +26,4 @@
 /mydet/particle1/particleName e-
 #/mydet/particle2/particleName pi-
 
-/run/beamOn 100000
+/run/beamOn 100
