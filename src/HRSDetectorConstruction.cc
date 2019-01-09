@@ -76,7 +76,7 @@ HRSDetectorConstruction::HRSDetectorConstruction()
 	//construct the material manager, this line should behind GetConfig()
 	//since it need to access the buffer of gConfig
 	mMaterialManager=HRSMaterial::GetHRSMaterialManager();
-        double LarmStepLimit=2.037 * mm;
+        double LarmStepLimit=2.000 * mm;
         LarmStepLimits = new G4UserLimits(LarmStepLimit);
 }
 
