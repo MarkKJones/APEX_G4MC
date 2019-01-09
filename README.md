@@ -38,5 +38,30 @@ There are a bunch of planes (defined in DetectorConstruction and used in Steppin
 Like "Q1Front", "vdc1Plane", "RSvSlBack" and "LSvSlBack" right and left Sieve back planes
 I haven't deleted them - may be useful.
 
+
 How to run:
 
+1. Set up geant:
+ON ifarm (@JLab) you just need to do 
+> setenv JLAB_ROOT /site/12gev_phys
+> source $JLAB_ROOT/softenv.csh 2.0
+Or, you can use your locally installed geant4 version.
+
+
+2. Download the package to your local directory 
+> git clone https://github.com/kvardan/APEX_G4MC
+
+
+3. Build:
+> cd APEX_G4MC
+> mkdir build; cd build
+> cmake ..
+> make
+
+
+4.Run:
+After above steps an axacutable "G4MC" will appear in build/ directory
+> cp G4MC ../test/no_sieve_central_target/files_in/
+> cd ../test/no_sieve_central_target/run
+> chmod 744 run_0003.sh
+> ./run_0003.sh
