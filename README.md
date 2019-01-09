@@ -4,7 +4,7 @@ This is a modified version of G4MC, where the magnetic fields are given accordin
 
 Magnetic Fields:
 
-Only dipole central field is using the fortran code (dipolert2.f) which is a part of the SNAKE package.
+Only dipole central field is using fortran code (dipolert2.f) which is a part of the SNAKE package.
 For the other fields (quads central and fringe fields, dipole fringe field) SNAKE functions are translated to cpp-language and implemented in the G4-codes (a few years ago I found this way more effective, but didn't manage to translate the last part - dipole central field).
 In the current version the fields are given as global field (by HRSEMField.cc).
 In old versions the fields were localized in volumes (see HRSEMFieldSetup.cc). This way was not very productive when I added fringe fields and tryed to run simulations with different step sizes, and also monitor the field values on each of the track steps.
