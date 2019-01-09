@@ -53,9 +53,9 @@ Or, you can use your locally installed geant4 version.
 
 
 3. Build:
-> cd APEX_G4MC;
-> mkdir build; cd build;
-> cmake .. ;
+> cd APEX_G4MC; <br>
+> mkdir build; cd build; <br>
+> cmake ..  <br>
 > make
 
 
