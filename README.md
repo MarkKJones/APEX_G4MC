@@ -91,6 +91,6 @@ After above steps an exacutable "G4MC" will appear in build/ directory
 > chmod 744 run_0003.sh <br>
 > ./run_0003.sh <br>
 
-Sometimes it it useful to see the detector visually <br>
+Sometimes it is useful to see the detector visually <br>
 You can go to files_in/ directory and type: 
 > ./G4MC -i -x 1
