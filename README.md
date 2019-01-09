@@ -43,7 +43,7 @@ How to run:
 
 1. Set up geant:
 ON ifarm (@JLab) you just need to do 
-> setenv JLAB_ROOT /site/12gev_phys
+> setenv JLAB_ROOT /site/12gev_phys;
 > source $JLAB_ROOT/softenv.csh 2.0
 Or, you can use your locally installed geant4 version.
 
@@ -53,9 +53,12 @@ Or, you can use your locally installed geant4 version.
 
 
 3. Build:
-> cd APEX_G4MC
-> mkdir build; cd build
-> cmake ..
+> cd APEX_G4MC;
+
+> mkdir build; cd build;
+
+> cmake .. ;
+
 > make
 
 
