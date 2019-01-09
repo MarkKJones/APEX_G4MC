@@ -1066,7 +1066,7 @@ G4VPhysicalVolume* HRSDetectorConstruction::Construct()
 
          double sieve_pos_z=-105.30001365*cm+(sieve_distance + pSieveSlitZ/2.)*cos(5.81*deg);
          double sieve_pos_x=(sieve_distance + pSieveSlitZ/2.)*sin(5.81*deg);
-/*
+
 
          double startphi=0.0*deg;
          double deltaphi=360.0*deg;
@@ -1165,7 +1165,7 @@ G4VPhysicalVolume* HRSDetectorConstruction::Construct()
 //                         sieveSlitLogical,"SievePhys",LHRSContainerLogical,0,0,0);
 
 
-*/
+
 
          G4RotationMatrix *R_RotY90deg_sieve_slit=new G4RotationMatrix();
          R_RotY90deg_sieve_slit->rotateY(-5.*deg);
