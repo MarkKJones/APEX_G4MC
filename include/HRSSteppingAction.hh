@@ -43,7 +43,7 @@ private:
 	std::ofstream output_vdc;
 	std::ofstream output1;
         std::ofstream output_focpl;
-	int i_st;
+	int i_st, iNoSecondary;
 
 private: 
 	HRSSteppingActionMessenger* messenger;
