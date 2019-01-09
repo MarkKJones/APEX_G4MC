@@ -47,6 +47,9 @@ BeamEnergy  LHRSMomentum  RHRSMomentum  BeamTiltedAngle #name list <br>
 These are the only numbers I changed in HRSUsage.ini <br>
 The rest I inherited from old versions and haven't changed (probably most of them are not useful anymore).
 
+The simulation step size is defined in DetectorConstruction.cc
+double LarmStepLimit=2.000 * mm;
+
 
 Simulation Analyses:
 
