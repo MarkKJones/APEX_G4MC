@@ -388,6 +388,7 @@ void HRSSteppingAction::UserSteppingAction(const G4Step* theStep)
 //   +200., +1600.,+200.      ;maxbox
 
         if (z_TCS>300.)
+	if(0)
         {
           cout<<"the track is killed after Q1. Go to SIMC simulations"<<endl;
           theStep->GetTrack()->SetTrackStatus(fStopAndKill);
