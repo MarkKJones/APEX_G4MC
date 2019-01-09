@@ -74,14 +74,15 @@ On ifarm (@JLab) <br>
 
 
 3. Build:
-> cd APEX_G4MC; <br>
-> mkdir build; cd build; <br>
+> cd APEX_G4MC <br>
+> mkdir build <br>
+> cd build <br>
 > cmake ..  <br>
 > make <br>
 
 
 4.Run:
-After above steps an axacutable "G4MC" will appear in build/ directory
+After above steps an exacutable "G4MC" will appear in build/ directory
 > cp G4MC ../test/no_sieve_central_target/files_in/ <br>
 > cd ../test/no_sieve_central_target/run <br>
 > chmod 744 run_0003.sh <br>
