@@ -25,6 +25,27 @@ There are two modes to construct the detector.
 Switching the septum "ON" in Detector.ini, the septum mode is built automatically.
 With "SeptumOn=0" the standard HRS can be used.
 3. The Sieve slits is defined for APEX modes, but it needs one line modification to place it in the HRS standard mode place.
+the following parameters (from Detector.ini) are used the most 
+
+SetupLSieveSlit=1; <br>
+SetupRSieveSlit=0; <br>
+sieve_thickness=0.5; <br>
+Rad_tail_foil_postn=-104.8; <br>
+#if fringe fileds are not needed FringeField=0 <br>
+FringeField=1; <br>
+SeptumOn=1; <br>
+SeptumNew=1; <br>
+SeptumFieldScale=1.0; <br>
+Q1Sos=1; <br>
+LFocalPlaneAngle=-45.0 <br>
+LHRSAngle=12.5; <br>
+RHRSAngle=347.5; <br>
+
+The central momentums are defined in HRSUsage.ini  <br>
+BeamEnergy  LHRSMomentum  RHRSMomentum  BeamTiltedAngle #name list <br>
+2200          1500         1500         0.0             #value list <br>
+These are the only numbers I changed in HRSUsage.ini <br>
+The rest I inherited from old versions and haven't changed (probably most of them are not useful anymore).
 
 
 Simulation Analyses:
