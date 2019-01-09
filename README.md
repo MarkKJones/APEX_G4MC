@@ -65,3 +65,7 @@ After above steps an axacutable "G4MC" will appear in build/ directory
 > cd ../test/no_sieve_central_target/run <br>
 > chmod 744 run_0003.sh <br>
 > ./run_0003.sh <br>
+
+Sometimes it it useful to see the detector visually
+The you can go to files_in/ directory and type: 
+> ./G4MC -i -x 1
