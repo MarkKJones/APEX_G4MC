@@ -4,7 +4,9 @@
 /stepping/verbose 0
 /tracking/particleOnly e-
 
-/tracking/noSecondary 0
+# for the full simulation noSecondary 0, it only the primary track is needed to be simulated - then /tracking/noSecondary 1
+#/tracking/noSecondary 1
+#see the same variable in HRSUsage.ini
 
 /mydet/gunRLow 0.0 mm
 /mydet/gunRHigh 0.0 mm
@@ -26,4 +28,4 @@
 /mydet/particle1/particleName e-
 #/mydet/particle2/particleName pi-
 
-/run/beamOn 100
+/run/beamOn 1000
