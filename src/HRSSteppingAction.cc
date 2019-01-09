@@ -44,6 +44,8 @@ HRSSteppingAction::HRSSteppingAction()
 	ang_fp*=deg;
 	gConfig->GetParameter("BookHistos",pBookHistos);
 	gConfig->GetParameter("BookTxt",pBookTxt);
+	iNoSecondary=1;
+	gConfig->GetArgument("NoSecondary",iNoSecondary);
 
 	CreateTxt=(pBookTxt>0);
 	CreateRootNt=(pBookTrees>0 || pBookHistos>0);
@@ -58,16 +60,6 @@ HRSSteppingAction::HRSSteppingAction()
 //        output_vdc.open("vdc_coord.C", ios::out | ios::app );
 //        output_vdc <<" {"<<endl;
 //        output_vdc <<" TH2D * vdc = new TH2D(\"vdc xy\", \"vdc xy\", 400, -40., 40., 400, -40., 40.);"<<endl;
-
-        output.open("coord.C", ios::out | ios::app );
-        output <<"{"<<endl;
-        output <<"double x[5000];"<<endl;
-        output <<"double y[5000];"<<endl;
-
-        output1.open("coord_xz.C", ios::out | ios::app );
-        output1 <<"{"<<endl;
-        output1 <<"double x[5000];"<<endl;
-        output1 <<"double y[5000];"<<endl;
 
         output_focpl.open("FocalPlanecoords.txt", ios::out | ios::app );
 
@@ -87,38 +79,6 @@ HRSSteppingAction::HRSSteppingAction()
 	P2x=0.;
 	P2y=0.;
 	P2z=0.;
-        if (1==2)
-        {
-          HRSEMField * ffield;
-          ffield = new HRSEMField();
-          output1.open("ffield.C", ios::out | ios::app );
-          output1 <<"{"<<endl;
-          output1 <<"TH2D * Bx = new TH2D(\"Bx\", \"Bx\", 2300, 0, 2300, 1000, -200, 800);"<<endl;
-	  for (double xz=1.*cm; xz<=2300.*cm; xz+=1.*cm)
-	  for (double yy=-200.*cm; yy<=800.*cm; yy+=1.*cm)
-	  {
-
-                  G4double coord_d[4]={xz*sin(mLHRSAngle),yy,xz*cos(mLHRSAngle),0};
-                  G4double bdasht[3]={0,0,0};
-                  ffield->GetFieldValue(coord_d, bdasht) ;
-                  if ((bdasht[0]!=0.) && (bdasht[1]!=0) && (bdasht[2]!=0.) && (fabs(bdasht[0])<=1000.*tesla) && (fabs(bdasht[1])<=1000.*tesla) && (fabs(bdasht[2])<=1000.*tesla) )
-                  {
-                    double angg=acos(bdasht[2]/sqrt(bdasht[2]*bdasht[2]+bdasht[0]*bdasht[0]))*fabs(bdasht[0])/bdasht[0]-mLHRSAngle;
-                    double b_new=sqrt(bdasht[2]*bdasht[2]+bdasht[0]*bdasht[0])*sin(angg);
-//                  cout<<"dip   x="<<bdasht[0]<<"  y="<<bdasht[1]<<"  z="<<bdasht[2]<<endl;
-                    output1 << "  Bx->Fill("<<xz/cm<<", "<< yy/cm <<", "<<b_new/tesla<< ");"<<endl;
-                  }
-                  else 
-                  {
-                    output1 << "  Bx->Fill("<<xz/cm<<", "<< yy/cm <<", "<<-5999.<< ");"<<endl;
-                  }
-          }
-          output1 <<"  Bx->Draw(\"colz\");"<<endl;
-          output1 <<"}"<<endl;
-          output1 <<endl;
-          output1.close();
-        }
-
 
 /*
         G4FieldManager *globalFieldManager;// = theStep->GetTrack()->GetVolume()->GetLogicalVolume()->GetFieldManager();
@@ -137,21 +97,6 @@ HRSSteppingAction::HRSSteppingAction()
 
 HRSSteppingAction::~HRSSteppingAction()
 {
-        output <<"int npoints="<<i_st<<";"<<endl;
-        output <<"TGraph *gr1 = new TGraph(npoints,x,y);"<<endl;
-        output <<"gr1->SetMarkerStyle(8);"<<endl;
-        output <<"gr1->Draw(\"APL\");"<<endl;
-        output <<"}"<<endl;
-        output <<endl;
-        output.close();
-
-        output1 <<"int npoints="<<i_st<<";"<<endl;
-        output1 <<"TGraph *gr1 = new TGraph(npoints,x,y);"<<endl;
-        output1 <<"gr1->SetMarkerStyle(8);"<<endl;
-        output1 <<"gr1->Draw(\"APL\");"<<endl;
-        output1 <<"}"<<endl;
-        output1 <<endl;
-        output1.close();
 
 //        output_vdc <<" vdc->Draw(\"colz\");"<<endl;
 //        output_vdc <<" }"<<endl;
@@ -203,7 +148,7 @@ void HRSSteppingAction::InitOutTxt()
 
 void HRSSteppingAction::UserSteppingAction(const G4Step* theStep)
 {
-//  cout << "WE ARE IN THE USER STEPPING ACTION DOOOOOOOOOOOOOOOOOOOOP!" << endl;
+//  cout << "WE ARE IN THE USER STEPPING ACTION" << endl;
         G4VPhysicalVolume* curPV  = theStep->GetPreStepPoint()->GetPhysicalVolume();
         G4String name = curPV->GetName();
         name.assign(name,0,70);
@@ -236,38 +181,6 @@ void HRSSteppingAction::UserSteppingAction(const G4Step* theStep)
 
           write_trig=true;
           prevevt_id =evt_id;
-//          cout<<"mass    "<<E1v<<setw(18)<<P1x<<setw(18)<<P1y<<setw(18)<<P1z<<setw(18)<<E2v<<setw(18)<<P2x<<setw(18)<<P2y<<setw(18)<<P2z<<endl;
-          if (pz_tmp_mass != 0)
-          {
-/*
-            if (P1z == 0)
-            {
-              P1x=px_tmp_mass;
-	      P1y=py_tmp_mass;
-	      P1z=pz_tmp_mass;
-	      E1v=e_tmp_mass;
-	    }
-*/
-//	    else if ((P2z == 0) && (P1z != pz_tmp_mass) )
-	    {
-//              P2x=px_tmp_mass;
-//	      P2y=py_tmp_mass;
-//	      P2z=pz_tmp_mass;
-//	      E2v=e_tmp_mass;
-	      if (el_n_mass == pos_n_mass)
-	      {
-                std::ofstream output_mass;
-                output_mass.open( "mass.txt", ios::out | ios::app );
-                output_mass<<G4EventManager::GetEventManager()->GetConstCurrentEvent()->GetEventID()
-                <<setw(15)<<E1v<<setw(18)<<P1x<<setw(18)<<P1y<<setw(18)<<P1z
-                <<setw(18)<<E2v<<setw(18)<<P2x<<setw(18)<<P2y<<setw(18)<<P2z<<endl;
-//              cout<<"mass    "<<E1v<<setw(18)<<P1x<<setw(18)<<P1y<<setw(18)<<P1z<<setw(18)<<E2v<<setw(18)<<P2x<<setw(18)<<P2y<<setw(18)<<P2z<<endl;
-                output_mass.close();
-                el_n_mass =-1;
-                pos_n_mass=-2;
-              }
-            }
-	  }
 //          P1x=0.;
 //	  P1y=0.;
 //	  P1z=0.;
@@ -387,26 +300,20 @@ void HRSSteppingAction::UserSteppingAction(const G4Step* theStep)
 //   -200., -100.,-200.      ;minbox x,y,z
 //   +200., +1600.,+200.      ;maxbox
 
-        if (z_TCS>300.)
-	if(0)
-        {
-          cout<<"the track is killed after Q1. Go to SIMC simulations"<<endl;
-          theStep->GetTrack()->SetTrackStatus(fStopAndKill);
-        }
-
         if ( (z_TCS>620.) && (z_TCS<630.) )
         if ( (sqrt(x_TCS*x_TCS+y_TCS*y_TCS)>31.) )
         {
             cout<<"the track is killed Q2 ex"<<endl;
             theStep->GetTrack()->SetTrackStatus(fStopAndKill);
         }
-/*
+
+        if (iNoSecondary)
         if (theStep->GetTrack()->GetTrackID()!=1)
         {
-            cout<<"the track is killed - secondary particle"<<endl;
+//            cout<<"the track:"<<theStep->GetTrack()->GetTrackID()<<" is killed - secondary particle"<<endl;
             theStep->GetTrack()->SetTrackStatus(fStopAndKill);
         }
-*/
+
         double pQ3Cen_y_tmp =  358.637  + 182./sqrt(2.)/2.;
         double pQ3Cen_z_tmp = 1702.67042  + 182./sqrt(2.)/2.;
 
@@ -425,7 +332,7 @@ void HRSSteppingAction::UserSteppingAction(const G4Step* theStep)
         }
         if (fabs(y)>820.)
         {
-            cout<<"the track is killed y > 820"<<endl;
+            cout<<"the track:"<<theStep->GetTrack()->GetTrackID()<<" is killed y > 820"<<endl;
             theStep->GetTrack()->SetTrackStatus(fStopAndKill);
         }
 
@@ -526,6 +433,7 @@ void HRSSteppingAction::UserSteppingAction(const G4Step* theStep)
 
 //        if (theStep->GetTrack()->GetTrackID()==1)
         if (p_HCS<1.27)
+        if (0)
         {
           cout<<"the track is killed (low momentum track, p="<<p_HCS<<" GeV)"<<endl;
           theStep->GetTrack()->SetTrackStatus(fStopAndKill);
@@ -533,6 +441,7 @@ void HRSSteppingAction::UserSteppingAction(const G4Step* theStep)
 
 
         if (p_HCS>0.5)
+        if (0)
         if ((name2 == "RSvSlBa") || (name2 == "LSvSlBa"))
         {
           double e_kin = theStep->GetTrack()->GetVertexKineticEnergy()+0.511;
@@ -632,7 +541,7 @@ void HRSSteppingAction::UserSteppingAction(const G4Step* theStep)
 
           cout<<"stepping "<<root_evt_no<<endl;
 //          output_vdc.open("vdc_coord.C", ios::out | ios::app );
-          output_vdc.open("vdc_pairs_coord.txt", ios::out | ios::app );
+          output_vdc.open("vdc_coord.txt", ios::out | ios::app );
 
 //          double vdc1Z=2084.18;
 //          double vdc1Y=740.142;
@@ -700,7 +609,7 @@ void HRSSteppingAction::UserSteppingAction(const G4Step* theStep)
 //          root_ent_no = new HRSPrimaryGeneratorAction;
 //          int root_evt_no = root_ent_no->root_nr(evtNb);
           int root_evt_no = 0;//root_ent_no->root_nr(evtNb);
-          output_vdc.open("vdc_pairs_coord.txt", ios::out | ios::app );
+          output_vdc.open("vdc_coord.txt", ios::out | ios::app );
 
 //          double vdc1Z=2084.18;
 //          double vdc1Y=740.142;
