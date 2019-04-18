@@ -45,7 +45,7 @@ The central momentums are defined in HRSUsage.ini  <br>
 BeamEnergy  LHRSMomentum  RHRSMomentum  BeamTiltedAngle #name list <br>
 2200          1500         1500         0.0             #value list <br>
 These are the only numbers I changed in HRSUsage.ini <br>
-The rest I inherited from old versions and haven't changed (probably most of them are not useful anymore).
+The rest I inherited from old versions and haven't changed (probably most of them are not useful anymore, because of removed modules).
 
 The simulation step size is defined in DetectorConstruction.cc
 double LarmStepLimit=2.000 * mm;
