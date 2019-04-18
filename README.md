@@ -24,7 +24,7 @@ There are two modes to construct the detector.
 2. APEX mode - where we have displaced targets (by about dz=-100 cm), septum magnet with it's vacuum chambers and then the standard HRS spectrometers (Q1, Q2, Dipole, Q3).
 Switching the septum "ON" in Detector.ini, the APEX mode is built automatically.
 With "SeptumOn=0" the standard HRS can be used.
-3. The Sieve slits is defined for APEX mode, but it needs one line modification to place it in the HRS standard mode place.
+3. The Sieve slits are defined for APEX mode, but it needs one line modification to place it in the HRS standard mode place.
 the following parameters (from Detector.ini) are used the most 
 
 SetupLSieveSlit=1; <br>
